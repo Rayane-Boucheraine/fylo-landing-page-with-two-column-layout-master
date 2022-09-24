@@ -1,0 +1,431 @@
+:root {
+    --VeryDarkBlue: hsl(243, 87%, 12%);
+    --DesaturatedBlue: hsl(238, 22%, 44%);
+    --BrightBlue: hsl(224, 93%, 58%);
+    --ModerateCyan: hsl(170, 45%, 43%);
+    --LightGrayishBlue: hsl(240, 75%, 98%);
+    --LightGray: hsl(0, 0%, 75%);
+    --transition: 0.3s;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1300px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* header */
+header {
+    padding: 30px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container > a img{
+    width: 92%;
+}
+header .container ul {
+    display: flex;
+}
+header .container ul li {
+    margin: 0 25px;
+}
+header .container ul li a {
+    color: var(--VeryDarkBlue);
+    font-size: 15.5px;
+    font-weight: 500;
+}
+/* files */
+.files {
+    height: calc(100vh - 108.47px);
+    padding: 40px 0;
+}
+.files .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.files .container .image, 
+.files .container .text {
+    flex-basis: 47%;
+}
+.files .container .text h2 {
+    font-size: 35px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--VeryDarkBlue);
+}
+.files .container .text p {
+    margin-bottom: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.files .container .image img {
+    width: 95%;
+}
+.files form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.files form input[type="email"] {
+    padding: 12px 70px 10px 15px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.507);
+    font-size: 13px;
+}
+.files form input[type="submit"] {
+    padding: 12px 60px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: var(--BrightBlue);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.files form input[type="submit"]:hover {
+    background-color: hsla(224, 93%, 58%, 0.849);
+}
+.files input::placeholder {
+    font-size: 13px;
+    color: var(--LightGray);
+}
+/* productive */
+.productive {
+    position: relative;
+    padding: 40px 0 80px;
+    background-color: hsla(240, 80%, 98%, 0.747);
+}
+.productive .curve {
+    position: absolute;
+    width: 100%;
+    top: -105px;
+}
+.productive .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.productive .container .text {
+    flex-basis: 52%;
+}
+.productive .container .text h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    margin-bottom: 32px;
+    color: var(--VeryDarkBlue)
+} 
+.productive .container .text > p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 14px;
+}
+.productive .container .text a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: fit-content;
+    padding-bottom: 4px;
+    color: var(--ModerateCyan);
+    border-bottom: 1.5px solid var(--ModerateCyan);
+    transition: var(--transition);
+}
+.productive .container .text a:hover {
+    color: hsla(170, 45%, 43%, 0.801);
+}
+.productive .container .text .person {
+    box-shadow: 0 0 15px 0 rgba(128, 128, 128, 0.295);
+    padding: 20px;
+    width: 320px;
+    border-radius: 5px;
+}
+.productive .container .text .person > p {
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.7;
+}
+.productive .container .text .person .him {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.productive .container .text .person .him img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+.productive .container .text .person .him p {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.productive .container .text .person .him p span {
+    display: block;
+    padding-top: 5px;
+    font-size: 9px;
+    color: rgba(0, 0, 0, 0.603);
+    font-weight: 400;
+}
+.productive .container .image {
+    flex-basis: 42%;
+}
+.productive .container .image img {
+    width: 100%;
+}
+/* access */
+.access {
+    padding: 70px 0;
+    background-color: var(--DesaturatedBlue);
+}
+.access .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.access .container .text,
+.access .container form {
+    flex-basis: 40%;
+}
+.access .container .text h3 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+.access .container .text p {
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 14.5px;
+    line-height: 1.7;
+}
+.access form input[type="email"] {
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 12px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.access form input[type="email"]::placeholder {
+    font-size: 14px;
+}
+.access form input[type="submit"] {
+    background-color: var(--BrightBlue);
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 14px 40px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.access form input[type="submit"]:hover {
+    background-color: hsla(204, 93%, 58%, 0.466);
+    letter-spacing: 1px;
+}
+/* footer */
+footer {
+    padding: 60px 0;
+    background-color: var(--VeryDarkBlue);
+}
+footer img {
+    filter: brightness(0) invert(1);
+    width: 130px;
+    margin-bottom: 32px;
+}
+footer .container .boxes {
+    display: flex;
+    justify-content: space-between;
+}
+footer .boxes ul li {
+    margin-bottom: 25px;
+    color: white;
+    font-size: 15px;
+}
+footer .boxes ul li i {
+    padding-right: 14px;
+}
+footer .boxes ul li a {
+    color: white;
+    font-size: 15px;
+    transition: var(--transition);
+}
+footer .boxes ul li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+footer .boxes ul:nth-of-type(4) {
+    display: flex;
+}
+footer .boxes ul:nth-of-type(4) li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: var(--transition);
+}
+footer .boxes ul:nth-of-type(4) li:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+footer .boxes ul:nth-of-type(4) li i {
+    padding: 0;
+    transition: var(--transition);
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(1):hover {
+    border-color: #1877f2;
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(1):hover i {
+    color: #1877f2;
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(2):hover {
+    border-color: #1da1f2;
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(2):hover i {
+    color: #1da1f2;
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(3):hover {
+    border-color: #c13584;
+}
+footer .boxes ul:nth-of-type(4) li:nth-of-type(3):hover i {
+    color: #c13584;
+}
+@media (max-width: 767px) {
+    header .container > a img {
+        width: 90px;
+    }
+    header .container {
+        align-items: center;
+    } 
+    header .container ul li {
+        margin: 0 10px;
+    }
+    header .container ul li a {
+        font-size: 14px;
+    }
+    .files .container {
+        flex-direction: column;
+    }
+    .files .container .image {
+        order: 1;
+        margin-bottom: 24px;
+    }
+    .files .container .text {
+        text-align: center;
+        order: 2;
+    }
+    .files .container .text  h2 {
+        font-size: 25px;
+    }
+    .files form {
+        flex-direction: column;
+    }
+    .files form input[type="email"] {
+        padding: 10px;
+        width: 90%;
+        margin-bottom: 8px;
+    }
+    .files form input[type="submit"] {
+        padding: 10px;
+        width: 90%;
+    }
+    .productive .container {
+        flex-direction: column;
+    }
+    .productive .curve {
+        top: -30px;
+    }
+    .productive .container .image {
+        order: 1;
+        margin: 16px 0 48px;
+    }
+    .productive .container .text {
+        order: 2;
+    }
+    .productive .container .text h2 {
+        font-size: 19px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .productive .container .text > p {
+        font-size: 15px;
+    }
+    .productive .container .text > p br {
+        display: none;
+    }
+    .productive .container .text a{
+        margin: 8px auto 32px;
+    }
+    .productive .container .text .person {
+        margin: 0 auto;
+    }
+    .access .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .access .container .text {
+        margin-bottom: 24px;
+    }
+    .access .container .text h3 {
+        font-size: 22px;
+    }
+    .access .container .text p {
+        font-size: 17px;
+    }
+    .access form input[type="email"] {
+        width: 80%;
+    }
+    .access form input[type="submit"] {
+        width: 80%;
+    }
+    footer {
+        padding: 40px 0;
+    }
+    footer .container .boxes {
+        flex-direction: column;
+        gap: 30px;
+    }
+    footer .boxes ul:nth-of-type(4) {
+        justify-content: center;
+    }
+}
